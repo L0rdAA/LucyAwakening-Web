@@ -1,0 +1,516 @@
+Text that appears outside of the <quest></quest> tags will not display anywhere and can be used for notes if required.
+
+// <quest id:Name of Quest|difficulty|catId>
+// OBJECTIVES separated by commas (leave this blank to not use objectives for a quest)
+// RESOLUTIONS separated by commas use | for line breaks (leave this blank if not using resolutions for a quest)
+// quest description
+// quest description
+// quest description
+// </quest>
+
+<quest 1:Defeat Orcs in the Terra's Greenlands.|1|0>
+Remaining \v[1] Orcs out of 15.
+
+Terra's Greenland is under assault 
+of Orcs. Terra's defenders are 
+doing their best to halt the 
+attack.
+
+We must stop them before it gets 
+out of hands!
+</quest>
+
+<quest 2:Assisting Terra's Commander|2|0>
+Assist the Terra's Commander.
+
+Terra's Commander has  
+launched an assault against
+the Orcs. I need to find him and
+assist him for the safety of Terra's
+Village. He should be located in
+the south of Terra's Village
+</quest>
+
+<quest 3:A Lass Request..|3|1>
+Bring \v[5]/5 Cockatrice Feather,Bring \v[4]/5 White Cockatrice F.
+
+Lass in Terra's village in
+need of different Cockatrice
+Feathers for her new style. I
+guess we gotta hunt some.
+</quest>
+
+<quest 4:No Longer Buzzing!|5|1>
+Eliminated \v[2]/6 Hornets,Bring \v[3]/3 Honey Combs.
+Trader looks happy of what we have accomplished! and now he is able to sell Honey
+Terra's village Trader has
+requested us to eliminate 
+hornets and harvest some
+combs in order to maintain
+a storage of honey for the
+village.
+</quest>
+
+<quest 5:Knighthood Test|10|0>
+Complete the Courage Test.
+
+NewStar Examiner has 
+given us a key to Wolves 
+Den's Basement. I don't
+know what in there but
+it is considered as a proof
+of courage.
+</quest>
+
+<quest 6:Wormer Down There!|7|1>
+Exterminate the Leeches.
+
+Looks like one of the 
+NewStar houses is under
+infestation of Leech worms.
+
+I think we can clear that 
+infestation by force. 
+</quest>
+
+<quest 7:Clothing Industry 1.|9|1>
+Bring \v[6]/4 Fox Hide.
+
+A trader in NewStar asks
+for fox hides for a new 
+clothing industry. We can
+find foxes in Wolves Den.
+</quest>
+
+<quest 8:River Rafting.|10|0>
+Bring \v[7]/7 Wood Logs,Bring \v[8]/2 Wood Planks.
+
+We have to build a raft,
+in order to sail to Selpa.
+We have been requested
+by a Stranded Man to join
+building it.
+</quest>
+
+<quest 9:Clothing Industry 2.|13|1>
+Bring \v[9]/10 Vicious Cotton.
+
+A trader in Selpa asks
+for vicious cotton for a 
+new clothing industry. 
+We can find the plant in 
+Selpa Bronze Mines.
+</quest>
+
+<quest 10:Sailing toward Travya.|15|0>
+Travel to Travya Region.
+
+Mike is on his way to Travya 
+for unknown reason. Let's 
+assist him and continue 
+our adventure. We should 
+use the ship located in the
+east of Selpa to sail there.
+</quest>
+
+<quest 11:Problems within Bronze Mine.|16|1>
+Clear the Bronze Mine's monsters.
+
+Selpa's Mayor has issues 
+with the monsters in the 
+bronze mine located west 
+of Selpa. We have to get 
+rid of those monsters to 
+resume Selpa's economy.
+</quest>
+
+<quest 13:Gotta make him madder.|18|1>
+Defeat Syver and Raiven.
+
+Raiven Sevani told us that
+Syver Hawk is her brother-
+in-arms. As for that, she 
+wants us to fight again 
+against both of them to 
+witness our strength.
+
+We got to give her what 
+she asked for, right ?
+</quest>
+
+<quest 14:A Sage Possession.|23|0>
+Bring \v[12]/1 Sage's Ball.
+
+A sage in Travya asks
+for his missing crystal 
+ball. No clue where to
+find it, but we will know
+once we find a strange 
+ball like him.
+</quest>
+
+<quest 15:Wolves and Vamps.|20|1>
+Rescue the old lady's family.
+
+An old lady in Travya asked
+us for our help to bring her
+family back to her. She said
+her family went to Vikka's
+Mountain and never returned
+She mentioned that her son
+wears a bracelet and her 
+husband wears a necklace
+
+Time to look for them.
+</quest>
+
+
+<quest 16:Lus's Treatment.|25|0>
+Find \v[15]/10 Shepherd Purse.
+
+Lus has a treatment to
+accelerate Mike's recovery.
+We should look for a herb
+that has tiny white petaled
+flowers on it's terminal 
+clusters. 
+
+We should look around this
+area and hope  to find some.
+</quest>
+
+<quest 17:The Backstabber.|27|0>
+Confront Cecilia.
+
+Cecilia has been witnessed 
+here. We have to look for her
+and confront her about her 
+actions with Shade.
+</quest>
+
+<quest 18:The Gold Town.|32|0>
+Reach LongHorn Town.
+
+Cecilia told us that LongHorn
+Town is nearby. We might
+try to find something that will
+help us sailing the open seas.
+</quest>
+
+<quest 19:Diplomacy Negotiation.|40|0>
+Save/Eliminate Danepu Tribe.
+
+LongHorn Mayor has given us
+a difficult task. To eliminate a
+whole tribe in order to 
+reconsider our ship offer.
+
+If there is no other way around
+it, we should make a decision.
+</quest>
+
+<quest 20:Mass Rescue.|35|1>
+Save Danepu Tribe.
+
+We have decided to save the
+Danepu tribe. We should 
+provide whatever means 
+necessary to assist them
+reaching a diplomatic 
+agreement with the centaurs.
+
+If that was successful, we 
+should infrom the Mayor
+with our action.
+</quest>
+
+<quest 21:Tribe Genocide.|35|1>
+Eliminate Danepu Tribe.
+
+We have decided to eliminate 
+the Danepu tribe. We should 
+be prepared with any action 
+they do toward us as they will
+be hostile.
+
+If that was successful, we 
+should infrom the Mayor
+with our action.
+</quest>
+
+<quest 22:Horse Dispute.|42|0>
+Resolve Kirkstead's quarrel.
+
+As what we have seen in the 
+Danepu's Cheiftain house, it
+seems the centaurs are attacking
+the tribe mercilessly.
+
+We have to uncover the truth 
+behind this dispute and reach
+for a peaceful negotation.
+</quest>
+
+<quest 23:Into the kingdoms.|65|0>
+Reach the Platinum Palace region.
+
+Platinum Palace is one of the
+stops we have to reach to 
+discover more about Shade 
+and his minions.
+
+It's located far south in Galasca.
+But we have no idea what to 
+expect there.
+</quest>
+
+<quest 24:Clothing Industry 3.|43|1>
+Bring \v[17]/3 Teal Dragon Skin.
+
+A trader in LongHorn asks
+for Teal Dragon skins for a 
+new clothing industry.
+ 
+We can find the dragon in 
+Hearst Island.
+</quest>
+
+
+<quest 25:Defeat the lions in Spring Vale.|50|1>
+Remaining \v[18] Lions out of 21.
+
+Lions are attacking the Spring 
+Vale village. The villagers need
+our help to clear out the lions.
+
+It might be dangerous, but we 
+can do it!
+</quest>
+
+<quest 26:No More Witchcraft Academy.|55|1>
+Escape the academy.
+
+The witches inside Hawford Witches
+Academy have put us in a polymorph
+spell, changing us into animals.
+ 
+We have to find a way to leave this 
+place and return back to our mission.
+</quest>
+
+<quest 27:Mermaid's Call.|60|1>
+Clear the Aquatic Cavern,Save the Mermaids
+
+Mermaids' home is under attack 
+by Ivan and Barbarossa. We 
+believe the reason they are 
+there is for the salvaged gold.
+
+We have to dive in the deep
+ocean. We should use the 
+stairs in Sandbrook Island 
+and dive from there.
+</quest>
+
+
+<quest 28:Clothing Industry Finalized.|75|1>
+Bring \v[35]/10 Taurus Horns
+
+A trader in LongHorn asks
+for Taurus Horns to finalize 
+her invention of a new cloth.
+ 
+We can find Taurus near in 
+Platinum Palace.
+</quest>
+
+<quest 29:Ridel Operation I.|65|0>
+Go to Ridel House.
+
+A strange guy named Ridel
+claims he has things related
+the the fate of Galasca and
+Shade. 
+His house is behind a 
+fountain in Hilltin Kingdom.
+</quest>
+
+<quest 30:Ridel Operation II.|65|0>
+Bring 1x Pink Formal Dress,Bring 1x Green Formal Dress,Bring 1x Maid Dress
+
+We will need formal clothes
+to attend the ceremony.
+
+There should be a clothes
+stall in the Market District
+within the Platinum Palace
+that may sells formal 
+clothes.
+</quest>
+
+<quest 31:Ridel Operation III.|66|0>
+Find 1x Axe of Titan,Find 1x Blade of Darkness
+
+We found our way inside 
+the Hilltin palace.
+
+Now all we have to do is
+to find as much as 
+legendary weapons that
+we can find and leave
+this place.
+</quest>
+
+<quest 32:Ridel Operation IV.|66|0>
+Report back to Ridel.
+
+The weapons are 
+heavily guarded from 
+the palace entrace.
+Lucy was captured 
+and we have no idea
+how to get her out of
+there.
+
+We should report to 
+Ridel about the mission
+status.
+</quest>
+
+
+<quest 33:Ocean Control.|70|0>
+Defeat Barbarossa.
+
+Lus has gathered
+up a team to attack
+Ravies Islands, located
+North-East of Platinum
+Palace.
+
+Let's see what we 
+can find in there. 
+</quest>
+
+
+<quest 34:Friend in Need I.|75|0>
+Rescue Lucy
+
+Time to use the air
+balloon to Vercenia Ruins
+where it should be located
+in the middle of Galasca
+
+The last known place for
+air balloon was near the
+Deserted Lodge, northeast
+of Platinum Palace 
+</quest>
+
+
+<quest 35:Friend in Need II.|80|0>
+Look for Lus, Capt. Ivan, Kidos and Oliva
+
+After the battle against
+Phantom, it appears that
+Lus and the pirate crew
+went against Shade
+
+We have to investigate
+Vercenia's Ruins for
+clues! 
+</quest>
+
+
+<quest 36:Final Confrontation.|85|0>
+Defeat Shade
+
+Shade is not backing down
+with his evil plans. 
+Time to put an end to
+all of this.
+
+We might consider having
+Black Diamond equipments
+or Ring of Night to
+survive their attacks. 
+</quest>
+
+
+<quest 37:A Fishy Introduction.|12|1>
+Catch a Tiny Grouper for Sam.
+
+We talked to Sailor Sam 
+near Selpa lake and 
+learned how to fish.
+
+We should catch our first 
+fish using the fishing 
+rod and bait provided 
+by Sam.
+</quest>
+
+
+<quest 38:A Bait of Choice|30|1>
+Catch a Blue Tang for Sam.
+
+Sailor Sam tried his best
+to catch a Blue Tang but
+failed until now. He said
+Clams and Oysters are the
+best baits for the 
+Blue Tangs
+
+Let's see what we can
+catch!
+</quest>
+
+
+<quest 39:A Fishy Treasure|40|1>
+Catch a sunken Chest for Sam.
+
+A sunken chest has been seen
+in LongHord Town. Sailor Sam
+tried to get it out but he
+could not do it
+
+Should we try to get it out?
+</quest>
+
+
+<quest 40:Improved Fishing|42|1>
+Bring \v[45]/1 Rod, Bring \v[44]/ Gold Line, Bring \v[46]/ Gold Hook.
+
+The sunken chest challenge
+seems requires a better rod
+and better line to be hooked. 
+Sailor Sam offered to
+help with the need of few
+items to make an advanced rod.
+</quest>
+
+
+<quest 41:A Fishy Challenge|5|1>
+Catch 1 Black Sharkminnow for Sam
+
+A mini shark causes Sailor Sam
+troubles as it doesn't seem to
+be attracted to random baits.
+
+Perhaps there are types of fish
+can be used as bait?
+</quest>
+
+
+<quest 42:A Fishy Boss|5|1>
+Catch 1 Great Shark for Sam
+
+Sailor Sam's fishing line got broken
+trying to catch a Great Shark.
+He seems wants to taste its meat
+as the rumors claims it is the 
+best fish meat ever tasted.
+
+Catching a Great Shark requires to
+catch a Devil Fish and use it 
+as a bait.
+</quest>
