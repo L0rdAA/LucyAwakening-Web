@@ -514,3 +514,41 @@ Catching a Great Shark requires to
 catch a Devil Fish and use it 
 as a bait.
 </quest>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<quest 1232132131:Missing fairy|2|1>
+
+
+Bring the blonde fairy's sister
+to her. Yup, that's it. Not much
+to it, really.
+
+This quest's objective line is
+blank so they don't appear at
+all below.
+</quest>
+
+<quest 12323:Fairy's to-do list|3|1>
+Scare off the chicken,Unlock the gate,Bring the fairy chocolate
+
+The fairy has a little list of
+chores for you to do in order
+to rescue her.
+
+I guess this is how you save
+the world?
+</quest>
