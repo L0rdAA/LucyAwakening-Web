@@ -1,0 +1,9 @@
+/* Prepared only. No ad network scripts. Slots remain hidden until a future reviewed activation. */
+.side-ad { display:none; }
+@media (min-width:1480px) {
+  .ad-layout-enabled .stage { grid-template-columns:160px 816px 160px; column-gap:160px; }
+  .ad-layout-enabled .side-ad { display:block; width:160px; min-height:600px; }
+}
+@media (max-width:1479px) {
+  .side-ad { display:none !important; }
+}
