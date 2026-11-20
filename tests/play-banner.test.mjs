@@ -107,3 +107,13 @@ test('publisher configuration yields distinct 160×600 tags without network requ
   assert.equal(new Set(sources).size, 2);
   assert.match(sources[1], /fb8b849e4e7abe9980a3506db7bb9bd3$/);
 });
+
+test('visible opt-in and opt-out controls sit directly above the game without a disclosure menu', () => {
+  const play = html.slice(html.indexOf('id="play"'), html.indexOf('id="play-banner-slot"'));
+  assert.match(play, /id="play-banner-opt-in" hidden/);
+  assert.match(play, /id="play-banner-opt-out" hidden/);
+  assert.match(play, /id="play-banner-allow" aria-describedby="play-banner-terms"/);
+  assert.match(play, /could read or change local game saves and settings/);
+  assert.match(play, /id="play-banner-off"[^>]*>[\s\S]*?<iframe[^>]*src="\/game\.html"/);
+  assert.doesNotMatch(play, /<details\b/);
+});
