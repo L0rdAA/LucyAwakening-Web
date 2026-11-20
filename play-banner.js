@@ -48,7 +48,7 @@
       const policy = (response.headers.get('Content-Security-Policy') || '')
         .split(';').map(value => value.trim());
       // Refuse to transfer consent unless the route advertises both header protections.
-      if (!response.ok || !policy.includes('sandbox allow-scripts allow-same-origin') ||
+      if (!response.ok || !policy.includes('sandbox allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox') ||
         !policy.includes("frame-ancestors 'none'") || !media.matches) throw new Error('Unavailable');
       sessionStorage.setItem(key, String(Date.now()));
       location.assign(route + '#play');
