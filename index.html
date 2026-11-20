@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="site.css">
   <link rel="stylesheet" href="side-ads.css">
   <link rel="icon" href="icon/icon.png">
+  <link rel="stylesheet" href="play-banner.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -43,6 +44,15 @@
       <h2>Returning to your adventure</h2>
       <p class="notice"><strong>Save before leaving.</strong> The game does not save just because you close the tab. Use the in-game menu to save, then choose <strong>Continue</strong> on the title screen when you return. Use the same browser profile and site address; clearing site data can remove your saves.</p>
     </section>
+  <section class="content" id="play-banner-opt-in" hidden aria-label="Optional desktop banner">
+      <details>
+        <summary>Support with an optional banner</summary>
+        <p>The game is available without ads. This option opens another Play page on the same site with one Adsterra banner next to the game. The third-party ad code runs with this site's permissions and could read or change game saves and settings stored in this browser. Adsterra and its partners may also receive technical data to deliver and measure ads.</p>
+        <p>Save your game first. Continuing will leave this page and reload the game. <a href="privacy.html#advertising">Advertising privacy</a>.</p>
+        <button type="button" id="play-banner-allow">Allow ads and open Play</button>
+        <p id="play-banner-status" role="status"></p>
+      </details>
+    </section>
   </main>
   <footer>
     <nav aria-label="More information">
@@ -52,5 +62,6 @@
       <a href="privacy.html" target="_blank" rel="noopener">Privacy (new tab)</a>
     </nav>
   </footer>
+  <script src="play-banner.js"></script>
 </body>
 </html>
