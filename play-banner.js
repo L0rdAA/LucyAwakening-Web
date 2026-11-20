@@ -34,6 +34,7 @@
 
     const rail = document.getElementById('play-banner-slot');
     const stage = document.getElementById('play');
+    const leftRail = () => document.getElementById('play-banner-left');
     if (!rail || !stage) {
       location.replace(playPath);
       return;
@@ -47,11 +48,28 @@
       "<script>atOptions = {'key':'e73878fc4620d0a640df1b47552532c4','format':'iframe','height':600,'width':160,'params':{}}</script>" +
       '<script src="https://bauval.org/22/e73878fc4620d0a640df1b47552532c4"></script>'
     );
+    // The left parser hook may write its distinct tag only inside the
+    // production, protected document after this script consumed fresh consent.
+    Object.defineProperty(window, '__lucyWriteLeftBanner', {
+      configurable: true,
+      value: writer => {
+        delete window.__lucyWriteLeftBanner;
+        const left = leftRail();
+        if (!media.matches || !left || document.currentScript?.parentElement !== left) return;
+        left.hidden = false;
+        writer();
+      },
+    });
     window.addEventListener('pageshow', event => { if (event.persisted) advertExit(); });
     addMediaListener(() => {
       if (!media.matches) {
         rail.replaceChildren();
         rail.hidden = true;
+        const left = leftRail();
+        if (left) {
+          left.replaceChildren();
+          left.hidden = true;
+        }
         stage.classList.remove('play-banner-active');
       }
     });
@@ -96,7 +114,7 @@
         location.assign(requestPath + '#play');
       } catch (_) {
         document.cookie = gate + '=; Max-Age=0' + gateCookie;
-        status.textContent = 'The optional banner is unavailable. You can continue playing here without ads.';
+        status.textContent = 'The optional banners are unavailable. You can continue playing here without ads.';
         button.disabled = false;
       }
     });
