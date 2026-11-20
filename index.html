@@ -8,7 +8,7 @@
   <title>Play Lucy's Awakening</title>
   <link rel="icon" href="/icon/icon.png">
   <link rel="stylesheet" href="/site.css?v=single-play-1">
-  <link rel="stylesheet" href="/play-banner.css?v=single-play-1">
+  <link rel="stylesheet" href="/play-banner.css?v=two-play-banners-1">
 </head>
 <body data-play-banner-route="false">
   <a class="skip" href="#main">Skip to content</a>
@@ -30,9 +30,13 @@
         <iframe title="Lucy's Awakening game" src="/game.html" allow="autoplay; fullscreen" allowfullscreen></iframe>
         <p class="controls"><span><strong>Move:</strong> arrows, D-pad, tap or click</span><span><strong>Confirm:</strong> Enter, tap or click</span><span><strong>Menu / back:</strong> Esc, two-finger tap or right-click</span></p>
       </section>
-      <aside id="play-banner-slot" hidden aria-label="Advertisement">
+      <aside id="play-banner-slot" class="play-banner-slot play-banner-right" hidden aria-label="Right advertisement">
         <p>Advertisement</p>
-        <script src="/play-banner.js?v=single-play-1"></script>
+        <script src="/play-banner.js?v=two-play-banners-1"></script>
+      </aside>
+      <aside id="play-banner-left" class="play-banner-slot play-banner-left" hidden aria-label="Left advertisement">
+        <p>Advertisement</p>
+        <script src="/play-banner-left.js?v=two-play-banners-1"></script>
       </aside>
     </div>
     <section class="content quick-start" aria-labelledby="before-you-play">
@@ -42,13 +46,13 @@
     </section>
     <section class="content banner-preferences" aria-label="Optional advertising">
       <details id="play-banner-opt-in" hidden>
-        <summary>Support the game with an optional banner</summary>
-        <p>Play is ad-free by default. If you opt in, one Adsterra banner appears next to the game on this page. Adsterra's script uses this site's browser permissions and could read or change local game saves and settings. Adsterra and its partners may receive technical data to show and measure ads.</p>
-        <p>Save first. Turning the banner on reloads Play.</p>
-        <button type="button" id="play-banner-allow">Show optional banner</button>
+        <summary>Support the game with optional banners</summary>
+        <p>Play is ad-free by default. If you opt in, up to two Adsterra banners appear beside the game on this page. Adsterra's scripts use this site's browser permissions and could read or change local game saves and settings. Adsterra and its partners may receive technical data to show and measure ads.</p>
+        <p>Save first. Turning the banners on reloads Play.</p>
+        <button type="button" id="play-banner-allow">Show optional banners</button>
         <p id="play-banner-status" role="status"></p>
       </details>
-      <div class="banner-off"><p>Save before turning off the banner. Play will reload.</p><button type="button" id="play-banner-off" hidden>Turn off banner</button></div>
+      <div class="banner-off"><p>Save before turning off the banners. Play will reload.</p><button type="button" id="play-banner-off" hidden>Turn off banners</button></div>
     </section>
   </main>
   <footer class="site-footer">

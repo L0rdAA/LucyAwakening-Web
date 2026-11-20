@@ -1,19 +1,20 @@
-#play-banner-slot { display: none; }
+.play-banner-slot { display: none; }
 @media (min-width: 1480px) and (hover: hover) and (pointer: fine) {
   .stage.play-banner-active {
     grid-template-columns: 160px minmax(0, 816px) 160px;
     column-gap: 48px;
   }
   .stage.play-banner-active .game { grid-column: 2; grid-row: 1; }
-  #play-banner-slot:not([hidden]) {
+  .play-banner-slot:not([hidden]) {
     display: block;
-    grid-column: 3;
     grid-row: 1;
     width: 160px;
     align-self: start;
     font-size: .76rem;
     color: var(--muted);
   }
-  #play-banner-slot p { margin: 0 0 .35rem; }
-  #play-banner-slot iframe { display: block; width: 160px; height: 600px; border: 0; background: transparent; }
+  .play-banner-left { grid-column: 1; }
+  .play-banner-right { grid-column: 3; }
+  .play-banner-slot p { margin: 0 0 .35rem; }
+  .play-banner-slot iframe { display: block; width: 160px; height: 600px; border: 0; background: transparent; }
 }
