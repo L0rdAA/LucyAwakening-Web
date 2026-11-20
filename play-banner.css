@@ -1,0 +1,13 @@
+#play-banner-opt-in[hidden],#play-banner-slot[hidden]{display:none!important}
+#play-banner-opt-in{display:none}
+#play-banner-slot{display:none}
+@media(min-width:1480px) and (hover:hover) and (pointer:fine){
+  #play-banner-opt-in:not([hidden]){display:block}
+  #play-banner-opt-in button{padding:.45rem .65rem;font:inherit;color:inherit;background:#241833;border:1px solid #8266a1;border-radius:.25rem}
+  #play-banner-opt-in button:focus-visible{outline:3px solid #f0cf81;outline-offset:3px}
+  .stage.play-banner-active{grid-template-columns:160px minmax(0,816px) 160px;column-gap:48px}
+  .stage.play-banner-active .game{grid-column:2;grid-row:1}
+  #play-banner-slot:not([hidden]){display:block;grid-column:3;grid-row:1;width:160px;min-height:600px;align-self:start;font-size:.75rem}
+  #play-banner-slot p{margin:.2rem 0 .45rem}
+  #play-banner-slot iframe{width:160px;height:600px;aspect-ratio:auto;background:transparent;outline:0}
+}

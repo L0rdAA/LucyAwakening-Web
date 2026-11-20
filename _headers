@@ -1,0 +1,12 @@
+/play-with-banner
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: sandbox allow-scripts allow-same-origin; frame-ancestors 'none'
+/play-with-banner.html
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: sandbox allow-scripts allow-same-origin; frame-ancestors 'none'
+/play-with-banner/
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: sandbox allow-scripts allow-same-origin; frame-ancestors 'none'
