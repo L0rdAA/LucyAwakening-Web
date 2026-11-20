@@ -4,64 +4,55 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-adsense-account" content="ca-pub-8837335120706633">
-  <meta name="description" content="Play the original browser RPG Lucy's Awakening. Get equipped at Lucy's camp, defend Terra, and track your first quests in Galasca.">
-  <title>Lucy's Awakening - Play online</title>
-  <link rel="stylesheet" href="site.css">
-  <link rel="stylesheet" href="side-ads.css">
-  <link rel="icon" href="icon/icon.png">
-  <link rel="stylesheet" href="play-banner.css">
+  <meta name="description" content="Play Lucy's Awakening, the second adventure in Shade: The Dark Knight, free in your browser.">
+  <title>Play Lucy's Awakening</title>
+  <link rel="icon" href="/icon/icon.png">
+  <link rel="stylesheet" href="/site.css?v=single-play-1">
+  <link rel="stylesheet" href="/play-banner.css?v=single-play-1">
 </head>
-<body>
+<body data-play-banner-route="false">
   <a class="skip" href="#main">Skip to content</a>
-  <header>
-    <p>Shade &middot; The Dark Knight</p>
+  <header class="site-header">
+    <p class="site-brand">Shade &middot; The Dark Knight</p>
     <nav aria-label="Main navigation">
-      <span aria-current="page">Play</span>
-      <a href="guide.html" target="_blank" rel="noopener">Player guide (new tab)</a>
-      <a href="about.html" target="_blank" rel="noopener">Story and contact (new tab)</a>
-      <a href="privacy.html" target="_blank" rel="noopener">Privacy (new tab)</a>
+      <a href="/" aria-current="page">Play</a>
+      <a href="/guide">Guide</a>
+      <a href="/about">About</a>
     </nav>
-    <h1>Lucy's Awakening</h1>
-    <p>Lucy Wseley is training near Terra when the sound of trouble wakes her. What starts as a night at camp turns into a defense of the village and a journey across Galasca. This is the second adventure in <em>Shade &ndash; The Dark Knight</em>, a browser-playable fantasy role-playing game.</p>
-    <p><a href="#play">Jump to the game</a></p>
   </header>
   <main id="main">
-    <section class="content" aria-labelledby="before-you-play">
-      <h2 id="before-you-play">Your first objective: defend Terra</h2>
-      <p>Start at Lucy's camp, where the tutorial board explains the controls. Take the Practice Sword and Barbarian Cloth from the camp chest, then open <strong>Equip</strong> to put them on. Lucy's tent offers a quick nap; it is a useful place to return to if you are injured during the opening fights.</p>
-      <p>In Terra's Greenlands, help the soldiers in the field and track the first story quest's 15 Orcs. After the count reaches zero, speak to the soldier stationed on the route. He points Lucy south toward the Orc cave to find Terra's Commander. The <a href="guide.html#greenlands" target="_blank" rel="noopener">opening walkthrough (new tab)</a> explains what to check if the objective stalls.</p>
-      <p>Optional jobs can wait until Terra is safe. One of the village traders sends Lucy to Honey Farm to fight six Hornets and bring back three intact Honey Combs. The <a href="guide.html#terra" target="_blank" rel="noopener">Terra side-quest checklist (new tab)</a> also covers the two kinds of Cockatrice feathers a villager asks for.</p>
-    </section>
-    <div class="stage" id="play">
-      <aside class="side-ad" hidden aria-label="Advertisement"></aside>
-      <section class="game" aria-label="Game">
-        <iframe title="Lucy's Awakening game" src="game.html" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        <p>Move: arrow keys, D-pad, touch or left click<br>Confirm: Enter, touch or left click &middot; Menu / back: Esc, two-finger touch or right click</p>
-      </section>
-      <aside class="side-ad" hidden aria-label="Advertisement"></aside>
+    <div class="content hero">
+      <h1>Lucy's Awakening</h1>
+      <p>Defend Terra and follow Lucy across Galasca in this free browser RPG.</p>
     </div>
-    <section class="content">
-      <h2>Returning to your adventure</h2>
-      <p class="notice"><strong>Save before leaving.</strong> The game does not save just because you close the tab. Use the in-game menu to save, then choose <strong>Continue</strong> on the title screen when you return. Use the same browser profile and site address; clearing site data can remove your saves.</p>
+    <div class="stage" id="play">
+      <section class="game" aria-label="Game">
+        <iframe title="Lucy's Awakening game" src="/game.html" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <p class="controls"><span><strong>Move:</strong> arrows, D-pad, tap or click</span><span><strong>Confirm:</strong> Enter, tap or click</span><span><strong>Menu / back:</strong> Esc, two-finger tap or right-click</span></p>
+      </section>
+      <aside id="play-banner-slot" hidden aria-label="Advertisement">
+        <p>Advertisement</p>
+        <script src="/play-banner.js?v=single-play-1"></script>
+      </aside>
+    </div>
+    <section class="content quick-start" aria-labelledby="before-you-play">
+      <h2 id="before-you-play">Quick start</h2>
+      <p>Read the tutorial board at camp. Take the Practice Sword and Barbarian Cloth from the chest and equip both before heading to Terra.</p>
+      <p class="notice"><strong>Save before leaving.</strong> Use the in-game menu to save, then choose <strong>Continue</strong> next time. Use the same browser and avoid clearing site data if you want to keep your saves.</p>
     </section>
-  <section class="content" id="play-banner-opt-in" hidden aria-label="Optional desktop banner">
-      <details>
-        <summary>Support with an optional banner</summary>
-        <p>The game is available without ads. This option opens another Play page on the same site with one Adsterra banner next to the game. The third-party ad code runs with this site's permissions and could read or change game saves and settings stored in this browser. Adsterra and its partners may also receive technical data to deliver and measure ads.</p>
-        <p>Save your game first. Continuing will leave this page and reload the game. <a href="privacy.html#advertising">Advertising privacy</a>.</p>
-        <button type="button" id="play-banner-allow">Allow ads and open Play</button>
+    <section class="content banner-preferences" aria-label="Optional advertising">
+      <details id="play-banner-opt-in" hidden>
+        <summary>Support the game with an optional banner</summary>
+        <p>Play is ad-free by default. If you opt in, one Adsterra banner appears next to the game on this page. Adsterra's script uses this site's browser permissions and could read or change local game saves and settings. Adsterra and its partners may receive technical data to show and measure ads.</p>
+        <p>Save first. Turning the banner on reloads Play.</p>
+        <button type="button" id="play-banner-allow">Show optional banner</button>
         <p id="play-banner-status" role="status"></p>
       </details>
+      <div class="banner-off"><p>Save before turning off the banner. Play will reload.</p><button type="button" id="play-banner-off" hidden>Turn off banner</button></div>
     </section>
   </main>
-  <footer>
-    <nav aria-label="More information">
-      <a href="about.html#contact" target="_blank" rel="noopener">Contact (new tab)</a>
-      <a href="https://sites.google.com/view/shade-thedarkknight/home" target="_blank" rel="noopener">Explore the story (new tab)</a>
-      <a href="https://linktr.ee/shadethedarkknight" target="_blank" rel="noopener">Follow Shade (new tab)</a>
-      <a href="privacy.html" target="_blank" rel="noopener">Privacy (new tab)</a>
-    </nav>
+  <footer class="site-footer">
+    <a href="/privacy">Privacy</a>
   </footer>
-  <script src="play-banner.js"></script>
 </body>
 </html>
