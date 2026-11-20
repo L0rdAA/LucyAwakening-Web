@@ -6,7 +6,7 @@ const allowedMarker = 'data-play-banner-route="true"';
 export default async (request, context) => {
   const url = new URL(request.url);
   if (url.pathname !== '/' || url.searchParams.get('play-banner') !== '1' ||
-      !['GET', 'HEAD'].includes(request.method)) return;
+      request.method !== 'GET') return;
 
   if (!new RegExp(gate).test(request.headers.get('cookie') || '')) return;
   const response = await context.next();
@@ -23,17 +23,19 @@ export default async (request, context) => {
   headers.set('Cache-Control', 'no-store');
   headers.set('Netlify-CDN-Cache-Control', 'no-store');
 
-  if (request.method === 'GET') {
+  for (const header of ['Content-Length', 'Content-Encoding', 'ETag', 'Last-Modified']) headers.delete(header);
+  if (request.headers.get('X-Lucy-Banner-Probe') === '1') return new Response(null, { status: 200, headers });
+
+  {
     const html = await response.clone().text();
     // Make the in-document eligibility marker and the CSP part of the same response.
     if (html.indexOf(defaultMarker) < 0 || html.indexOf(defaultMarker) !== html.lastIndexOf(defaultMarker)) return response;
     body = html.replace(defaultMarker, allowedMarker);
     headers.append('Set-Cookie', '__Host-lucy-banner=; Max-Age=0; Path=/; Secure; SameSite=Lax');
-    for (const header of ['Content-Length', 'Content-Encoding', 'ETag', 'Last-Modified']) headers.delete(header);
   }
   return new Response(body, { status: response.status, statusText: response.statusText, headers });
 };
 
 export const config = {
-  path: '/', method: ['GET', 'HEAD'], header: { cookie: gate }, onError: 'bypass',
+  path: '/', method: 'GET', header: { cookie: gate }, onError: 'bypass',
 };

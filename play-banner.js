@@ -84,7 +84,7 @@
       try {
         button.disabled = true;
         document.cookie = gate + '=1; Max-Age=30' + gateCookie;
-        const response = await fetch(requestPath, { method: 'HEAD', cache: 'no-store', redirect: 'error' });
+        const response = await fetch(requestPath, { headers: { 'X-Lucy-Banner-Probe': '1' }, cache: 'no-store', redirect: 'error' });
         const policy = response.headers.get('Content-Security-Policy') || '';
         const safetyPolicy = "sandbox allow-scripts allow-same-origin; frame-ancestors 'none'";
         if (!response.ok || response.headers.get('X-Lucy-Play-Banner') !== 'protected' ||
