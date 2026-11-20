@@ -78,8 +78,9 @@
   const initialize = () => {
     if (active) {
       const off = document.getElementById('play-banner-off');
-      if (off) {
-        off.hidden = false;
+      const offPanel = document.getElementById('play-banner-opt-out');
+      if (off && offPanel) {
+        offPanel.hidden = false;
         off.addEventListener('click', event => { if (event.isTrusted) advertExit(); });
       }
       // Restore site navigation in the protected document without opening new tabs.

@@ -1,13 +1,27 @@
+.play-banner-preferences:not(:has(> :not([hidden]))) { display: none; }
+.play-banner-preferences {
+  align-self: start;
+  padding: .65rem .85rem;
+  margin-bottom: .65rem;
+  border: 1px solid var(--line);
+  border-radius: .35rem;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: .85rem;
+}
+.play-banner-preferences p { margin: 0 0 .5rem; }
+.play-banner-preferences #play-banner-status:not(:empty) { margin: .5rem 0 0; }
 .play-banner-slot { display: none; }
 @media (min-width: 1480px) and (hover: hover) and (pointer: fine) {
   .stage.play-banner-active {
     grid-template-columns: 160px minmax(0, 816px) 160px;
     column-gap: 48px;
   }
-  .stage.play-banner-active .game { grid-column: 2; grid-row: 1; }
+  .stage.play-banner-active .play-banner-preferences { grid-column: 2; grid-row: 1; }
+  .stage.play-banner-active .game { grid-column: 2; grid-row: 2; }
   .play-banner-slot:not([hidden]) {
     display: block;
-    grid-row: 1;
+    grid-row: 2;
     width: 160px;
     align-self: start;
     font-size: .76rem;
