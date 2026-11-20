@@ -115,5 +115,10 @@ test('visible opt-in and opt-out controls sit directly above the game without a 
   assert.match(play, /id="play-banner-allow" aria-describedby="play-banner-terms"/);
   assert.match(play, /could read or change local game saves and settings/);
   assert.match(play, /id="play-banner-off"[^>]*>[\s\S]*?<iframe[^>]*src="\/game\.html"/);
+  assert.match(play, /Ads are off by default.*cookies.*collect browser data/);
+  assert.match(play, /Save first: Play will reload/);
+  assert.match(play, /href="\/privacy#advertising"/);
+  assert.doesNotMatch(play, /Adsterra/i);
+  assert.match(read('privacy.html'), /adsterra\.com\/privacy-policy-managed/);
   assert.doesNotMatch(play, /<details\b/);
 });
