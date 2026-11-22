@@ -78,7 +78,7 @@ test('Google route is ad-free and frame restricted, and only observed iframe loa
   const handle = createCounterHandler(() => store);
   const path = '/trilogy-visit-counter';
   const peek = await handle(request(path), context);
-  assert.match(await peek.text(), /Recorded visits: <strong>400</);
+  assert.match(await peek.text(), /Visitor No\. : <strong>400</);
   assert.equal(store.writes, 0);
   const rejected = await handle(request(path, { headers: { 'Sec-Fetch-Dest': 'iframe', Referer: 'https://other.example/' } }), context);
   assert.match(await rejected.text(), /<strong>400</);
@@ -86,10 +86,10 @@ test('Google route is ad-free and frame restricted, and only observed iframe loa
   assert.match(response.headers.get('content-security-policy'), /frame-ancestors https:\/\/sites\.google\.com https:\/\/\*\.googleusercontent\.com/);
   assert.equal(response.headers.get('set-cookie'), null);
   const body = await response.text();
-  assert.match(body, /Recorded visits: <strong>400</);
-  assert.match(body, /Includes a starting count of 400/);
+  assert.match(body, /Visitor No\. : <strong>400</);
+  assert.doesNotMatch(body, /Includes a starting count/);
   assert.equal(store.values.get('shade-trilogy').data, 1);
-  assert.match(await (await handle(request(path), context)).text(), /Recorded visits: <strong>401</);
+  assert.match(await (await handle(request(path), context)).text(), /Visitor No\. : <strong>401</);
   assert.equal(store.values.get('shade-trilogy').data, 1);
   assert.doesNotMatch(body, /<script|adsterra|bauval/);
   assert.equal(store.values.has('lucy-awakening'), false);
@@ -105,7 +105,8 @@ test('a failure leaves the counter unavailable rather than showing a false count
 test('game shell remains untouched while all four navigation pages show the counter in the footer', () => {
   for (const page of ['index.html', 'about.html', 'guide.html', 'privacy.html']) {
     const html = read(page);
-    assert.match(html, /Includes a starting count of 343/);
+    assert.match(html, /Visitor No\. : <strong id="site-visit-count"><\/strong>/);
+    assert.doesNotMatch(html, /Includes a starting count/);
     assert.match(html, /<footer[^>]*>[\s\S]+class="site-visit-count" hidden[\s\S]*?<\/footer>/);
     assert.match(html, /<script src="\/visit-counter\.js" defer>/);
   }

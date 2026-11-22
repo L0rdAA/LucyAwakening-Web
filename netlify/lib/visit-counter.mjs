@@ -36,7 +36,7 @@ const embedHeaders = {
 
 function embed(recorded, status = 200) {
   const value = validCount(recorded) ? (trilogyBaseline + recorded).toLocaleString('en-US') : 'Unavailable';
-  return new Response(`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Trilogy site visits</title><style>html{color-scheme:dark}body{margin:0;background:#0d0b17;color:#f2eef9;font:14px/1.45 system-ui,sans-serif;text-align:center;padding:8px 4px;overflow-wrap:anywhere}small{display:block;color:#c4bbd0}</style><body>Recorded visits: <strong>${value}</strong><small>Includes a starting count of ${trilogyBaseline}</small></body></html>`, { status, headers: embedHeaders });
+  return new Response(`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Trilogy site visits</title><style>html{color-scheme:dark}body{margin:0;background:#0d0b17;color:#f2eef9;font:14px/1.45 system-ui,sans-serif;text-align:center;padding:8px 4px;overflow-wrap:anywhere}</style><body>Visitor No. : <strong>${value}</strong></body></html>`, { status, headers: embedHeaders });
 }
 
 function allowedEmbedReferrer(request) {
