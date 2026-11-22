@@ -104,4 +104,3 @@ button:disabled { cursor: wait; opacity: .7; }
 
 .site-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .45rem 1.2rem; }
 .site-visit-count { color: var(--muted); font-variant-numeric: tabular-nums; }
-.site-visit-count small { display: block; }
