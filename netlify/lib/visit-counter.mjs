@@ -31,7 +31,7 @@ export async function recordPageLoad(store, key) {
 const embedHeaders = {
   ...headers,
   'Content-Type': 'text/html; charset=utf-8',
-  'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; frame-ancestors https://sites.google.com https://*.googleusercontent.com; base-uri 'none'; form-action 'none'",
+  'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; frame-ancestors https://sites.google.com https://*.googleusercontent.com https://www.gstatic.com; base-uri 'none'; form-action 'none'",
 };
 
 function embed(recorded, status = 200) {
