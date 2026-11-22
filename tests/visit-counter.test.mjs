@@ -83,7 +83,7 @@ test('Google route is ad-free and frame restricted, and only observed iframe loa
   const rejected = await handle(request(path, { headers: { 'Sec-Fetch-Dest': 'iframe', Referer: 'https://other.example/' } }), context);
   assert.match(await rejected.text(), /<strong>400</);
   const response = await handle(request(path, { headers: { 'Sec-Fetch-Dest': 'iframe', Referer: 'https://sites.google.com/' } }), context);
-  assert.match(response.headers.get('content-security-policy'), /frame-ancestors https:\/\/sites\.google\.com https:\/\/\*\.googleusercontent\.com/);
+  assert.match(response.headers.get('content-security-policy'), /frame-ancestors https:\/\/sites\.google\.com https:\/\/\*\.googleusercontent\.com https:\/\/www\.gstatic\.com;/);
   assert.equal(response.headers.get('set-cookie'), null);
   const body = await response.text();
   assert.match(body, /Visitor No\. : <strong>400</);
