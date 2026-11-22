@@ -8,5 +8,8 @@
         "width": 816,
         "height": 624,
         "icon": "icon/icon.png"
+    },
+    "dependencies": {
+        "@netlify/blobs": "11.1.9"
     }
 }
