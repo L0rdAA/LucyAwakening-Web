@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="What Lucy’s Awakening stores in your browser and how optional desktop advertising works.">
   <title>Privacy | Lucy’s Awakening</title>
-  <link rel="stylesheet" href="/site.css?v=single-play-1">
+  <link rel="stylesheet" href="/site.css?v=footer-counter-1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -26,8 +26,9 @@
       <p>The game stores saves and settings locally in your browser. There is no player account or cloud save sync. Use the same browser profile and site address to keep your progress. Clearing this site’s browser data can permanently remove saves and settings.</p>
     </section>
     <section>
-      <h2>Hosting</h2>
+      <h2>Hosting and site visits</h2>
       <p>Netlify hosts the site and game files. Hosting and security services process technical information such as IP addresses to deliver and protect the site. See <a href="https://www.netlify.com/privacy/">Netlify’s privacy information</a>.</p>
+      <p>The public counter adds recorded page loads to a starting count of 343. The starting count is not measured traffic, and the counter does not identify unique visitors. The counter itself does not use cookies, read local storage, or store any personal identifiers.</p>
     </section>
     <section aria-labelledby="advertising">
       <h2 id="advertising">Optional advertising</h2>
@@ -44,6 +45,7 @@
       <p>Your browser settings let you manage stored site data. Clearing it can delete progress. Contact the project with questions about information you’ve sent.</p>
     </section>
   </main>
-  <footer class="site-footer"><a href="/privacy" aria-current="page">Privacy</a></footer>
+  <footer class="site-footer"><a href="/privacy" aria-current="page">Privacy</a><span class="site-visit-count" hidden>Page loads: <strong id="site-visit-count"></strong><small>Includes a starting count of 343</small></span></footer>
+<script src="/visit-counter.js" defer></script>
 </body>
 </html>

@@ -101,3 +101,7 @@ button:disabled { cursor: wait; opacity: .7; }
 }
  .banner-off:not(:has(button:not([hidden]))) { display: none; }
 .banner-preferences:has(.banner-off button:not([hidden])) { margin-top: 1rem; }
+
+.site-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .45rem 1.2rem; }
+.site-visit-count { color: var(--muted); font-variant-numeric: tabular-nums; }
+.site-visit-count small { display: block; }
